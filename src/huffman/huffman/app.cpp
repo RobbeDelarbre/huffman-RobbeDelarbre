@@ -13,7 +13,11 @@
 */
 int main()
 {
-    std::cout << "Hello world!";
+#ifdef NDEBUG
+    std::cout << "You are running the release build";
+#else
+    std::cout << "You are running the debug build";
+#endif
 }
 
 #endif
