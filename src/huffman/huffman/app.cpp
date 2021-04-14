@@ -14,9 +14,9 @@
 int main()
 {
 #ifdef NDEBUG
-    std::cout << "You are running the release build";
+    std::cout << "You are running the release build" << std::endl;
 #else
-    std::cout << "You are running the debug build";
+    std::cout << "You are running the debug build" << std::endl;
 #endif
 }
 
