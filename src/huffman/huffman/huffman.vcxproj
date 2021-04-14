@@ -205,6 +205,7 @@
     <ClCompile Include="app.cpp" />
     <ClCompile Include="easylogging++.cc" />
     <ClCompile Include="logging.cpp" />
+    <ClCompile Include="tests\example-tests.cpp" />
     <ClCompile Include="tests\tests.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
