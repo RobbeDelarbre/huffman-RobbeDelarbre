@@ -13,16 +13,20 @@ def abort(message):
 def check_first_name(value):
     if not isinstance(value, str):
         abort('first-name should be string')
+    if value == 'TODO':
+        abort('Oh come on, you forgot to fill in your first name!')
 
 def check_last_name(value):
     if not isinstance(value, str):
         abort('last-name should be string')
+    if value == 'TODO':
+        abort('... You forgot to fill in your last name')
 
 def check_url(value):
     if not isinstance(value, str):
         abort('github-url should be string')
-    if not re.fullmatch(r'https://github.com/.*', value):
-        abort('github-url is invalid; it should start with https://github.com/')
+    if not re.fullmatch(r'https://github.com/ucll-pvm2122/huffman-([^./]*)', value):
+        abort('github-url is invalid; it should have the form https://github.com/ucll-pvm2122/huffman-LOGIN')
 
 
 print(f"Looking for {report_filename}")
