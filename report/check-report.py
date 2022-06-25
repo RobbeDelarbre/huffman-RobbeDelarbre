@@ -53,3 +53,5 @@ for key, checker in [ ('first-name', check_first_name), ('last-name', check_last
 
 print('SUCCESS')
 print('You can upload your report now')
+print('Note: approval of this script does NOT mean your report.json is necessarily fully correct')
+print('For example, your name or GitHub URL could still be wrong; there is no way for this script to check this')
