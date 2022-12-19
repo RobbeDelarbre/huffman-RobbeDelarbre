@@ -9,6 +9,7 @@ namespace data
 	template<typename T>
 	class FrequencyTable
 	{
+	public:
 		std::map<T, unsigned> freqtable;
 		typename std::map<T, unsigned>::iterator it;
 
