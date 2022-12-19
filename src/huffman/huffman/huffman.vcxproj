@@ -207,6 +207,7 @@
     <ClCompile Include="easylogging++.cc" />
     <ClCompile Include="logging.cpp" />
     <ClCompile Include="tests\tests.cpp" />
+    <ClCompile Include="tests\type-selection-tests.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
