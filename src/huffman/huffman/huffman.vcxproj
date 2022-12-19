@@ -200,6 +200,7 @@
   <ItemGroup>
     <ClInclude Include="catch.hpp" />
     <ClInclude Include="easylogging++.h" />
+    <ClInclude Include="util.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="app.cpp" />
