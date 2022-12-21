@@ -215,6 +215,7 @@
     <ClCompile Include="io\binary-io.cpp" />
     <ClCompile Include="io\files.cpp" />
     <ClCompile Include="logging.cpp" />
+    <ClCompile Include="tests\binary-io-tests.cpp" />
     <ClCompile Include="tests\binary-tree-tests.cpp" />
     <ClCompile Include="tests\frequency-table-tests.cpp" />
     <ClCompile Include="tests\tests.cpp" />

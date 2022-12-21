@@ -7,7 +7,7 @@
 
 namespace io
 {
-	u64 io::read_bits(u64, InputStream&);
+	u64 read_bits(u64, InputStream&);
 	void write_bits(u64, u64, OutputStream&);
 
 }
