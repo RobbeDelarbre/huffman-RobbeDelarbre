@@ -3,6 +3,8 @@
 
 #include <io/streams.h>
 #include <io/data-endpoints.h>
+#include <util.h>
+#include <memory>
 
 namespace encoding
 {
@@ -31,6 +33,18 @@ namespace encoding
 			return _encode_imp.get();
 		}
 	};
+}
+
+template<u64 IN, u64 OUT>
+void encode(io::DataSource<IN> source, encoding::Encoding<IN, OUT> encoding, io::DataDestination<OUT> destination)
+{
+	encoding->encode(*source->create_input_stream(), *destination->create_output_stream());
+}
+
+template<u64 IN, u64 OUT>
+void decode(io::DataSource<IN> source, encoding::Encoding<IN,OUT> encoding, io::DataDestination<OUT> destination)
+{
+	encoding->encode(*source->create_input_stream(), *destination->create_output_stream());
 }
 
 
