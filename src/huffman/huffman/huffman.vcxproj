@@ -208,6 +208,7 @@
     <ClCompile Include="app.cpp" />
     <ClCompile Include="easylogging++.cc" />
     <ClCompile Include="logging.cpp" />
+    <ClCompile Include="tests\binary-tree-tests.cpp" />
     <ClCompile Include="tests\frequency-table-tests.cpp" />
     <ClCompile Include="tests\tests.cpp" />
     <ClCompile Include="tests\type-selection-tests.cpp" />

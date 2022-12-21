@@ -77,6 +77,25 @@ namespace data
 			return true;
 		}
 	};
+
+	template<typename IN, typename OUT>
+	std::unique_ptr<Node<OUT>> map(const Node<IN>& tree, std::function<OUT(const IN&)> function)
+	{
+		if (dynamic_cast<const data::Leaf<IN>*>(&tree) != nullptr)
+		{
+			const data::Leaf<IN>* leaf = dynamic_cast<const data::Leaf<IN>*>(&tree);
+			return std::make_unique<Leaf<OUT>>(function(leaf->get_value()));
+		}
+		else
+		{
+			const data::Branch<IN>* branch = dynamic_cast<const data::Branch<IN>*>(&tree);
+
+			auto new_left_child = map<IN, OUT>(branch->get_left_child(), function);
+			auto new_right_child = map<IN, OUT>(branch->get_right_child(), function);
+
+			return std::make_unique<Branch<OUT>>(std::move(new_left_child), std::move(new_right_child));
+		}
+	}
 }
 
-#endif BINARY_TREE_H
+#endif
