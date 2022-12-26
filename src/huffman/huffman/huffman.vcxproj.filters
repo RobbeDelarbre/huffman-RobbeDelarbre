@@ -89,5 +89,8 @@
     <ClCompile Include="encoding\eof-encoding.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="tests\eof-encoding-tests.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

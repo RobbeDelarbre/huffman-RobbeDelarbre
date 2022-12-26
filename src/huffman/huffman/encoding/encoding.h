@@ -42,9 +42,9 @@ void encode(io::DataSource<IN> source, encoding::Encoding<IN, OUT> encoding, io:
 }
 
 template<u64 IN, u64 OUT>
-void decode(io::DataSource<IN> source, encoding::Encoding<IN,OUT> encoding, io::DataDestination<OUT> destination)
+void decode(io::DataSource<OUT> source, encoding::Encoding<IN, OUT> encoding, io::DataDestination<IN> destination)
 {
-	encoding->encode(*source->create_input_stream(), *destination->create_output_stream());
+	encoding->decode(*source->create_input_stream(), *destination->create_output_stream());
 }
 
 
