@@ -2,7 +2,6 @@
 #define BINARY_TREE_H
 
 #include <map>
-#include <vector>
 #include <memory>
 #include <functional>
 
@@ -20,11 +19,11 @@ namespace data
 	template<typename T>
 	class Branch : public Node<T>
 	{
-		std::unique_ptr <Node<T>> _left_child;
+		std::unique_ptr<Node<T>> _left_child;
 		std::unique_ptr<Node<T>> _right_child;
 
 	public:
-		Branch(std::unique_ptr<Node<T>> left_child, std::unique_ptr<Node<T>> right_child) : _left_child(std::move(left_child)), _right_child(std::move(_right_child)) { }
+		Branch(std::unique_ptr<Node<T>> left_child, std::unique_ptr<Node<T>> right_child) : _left_child(std::move(left_child)), _right_child(std::move(right_child)) { }
 
 		const Node<T>& get_right_child() const
 		{

@@ -57,6 +57,9 @@
     <ClInclude Include="encoding\encoding-combiner.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="encoding\huffman\tree-encoding.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="easylogging++.cc">
@@ -101,10 +104,16 @@
     <ClCompile Include="encoding\bit-grouper.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="tests\bit_grouper_encoding.cpp">
+    <ClCompile Include="tests\bit_grouper_encoding_tests.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="tests\encoding-combiner-tests.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="encoding\huffman\tree-encoding.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="tests\huffman_tree_encoding_tests.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

@@ -9,8 +9,6 @@
 #include <io/memory-buffer.h>
 
 
-#endif
-
 namespace 
 {
     void check(u64 n, unsigned nbits)
@@ -50,3 +48,4 @@ namespace
         check(357478, 19);
     }
 }
+#endif
