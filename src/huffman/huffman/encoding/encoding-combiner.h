@@ -23,7 +23,7 @@ namespace encoding
 			auto temp_output = temp.destination();
 
 			_e1->encode(input, *temp_output->create_output_stream());
-			_e2 - encode(*temp_input->create_input_stream(), output);
+			_e2->encode(*temp_input->create_input_stream(), output);
 		}
 
 		const void decode(io::InputStream& input, io::OutputStream& output) const override
@@ -41,7 +41,7 @@ namespace encoding
 	Encoding<N1, N3> operator | (Encoding<N1, N2> e1, Encoding<N2, N3> e2)
 	{
 		auto combiner = std::make_shared<EncodingCombinerImplementation<N1, N2, N3>>(e1, e2);
-		return Encoding<N1, N2>(combiner);
+		return Encoding<N1, N3>(combiner);
 	}
 }
 
