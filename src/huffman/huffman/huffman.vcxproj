@@ -203,6 +203,7 @@
     <ClInclude Include="data\frequency-table.h" />
     <ClInclude Include="easylogging++.h" />
     <ClInclude Include="encoding\encoding.h" />
+    <ClInclude Include="encoding\eof-encoding.h" />
     <ClInclude Include="io\binary-io.h" />
     <ClInclude Include="io\data-endpoints.h" />
     <ClInclude Include="io\files.h" />
@@ -213,6 +214,7 @@
   <ItemGroup>
     <ClCompile Include="app.cpp" />
     <ClCompile Include="easylogging++.cc" />
+    <ClCompile Include="encoding\eof-encoding.cpp" />
     <ClCompile Include="io\binary-io.cpp" />
     <ClCompile Include="io\files.cpp" />
     <ClCompile Include="logging.cpp" />
