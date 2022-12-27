@@ -7,6 +7,7 @@ namespace
 	class HuffmanEncodingImplementation : public encoding::EncodingImplementation
 	{
 		const u64 _domain_size;
+	public:
 
 		HuffmanEncodingImplementation(u64 domain_size) : _domain_size(domain_size) {}
 
@@ -167,6 +168,11 @@ namespace encoding
 				Datum data = decode_single_datum(input, tree);
 				output.write(data);
 			}
+		}
+
+		std::shared_ptr<EncodingImplementation> create_huffman_implementation(u64 domain_size)
+		{
+			return std::make_shared<HuffmanEncodingImplementation>(domain_size);
 		}
 
 	}

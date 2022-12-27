@@ -20,8 +20,17 @@ namespace encoding
 		Datum weight(std::unique_ptr<data::Node<std::pair<Datum, u64>>>);
 		bool weight_comparator(std::unique_ptr<data::Node<std::pair<Datum, u64>>>&, std::unique_ptr<data::Node<std::pair<Datum, u64>>>&);
 		std::map<Datum, std::vector<Datum>> build_bits(const data::Node<Datum>&, std::map<Datum, std::vector<Datum>>, std::vector<Datum>);
-		void decode_bits(io::InputStream&, data::Node<Datum>&, io::OutputStream&);
 
+		std::shared_ptr<EncodingImplementation> create_huffman_implementation(u64);
+
+		template<u64 N>
+		Encoding<N, 2> huffman_encoding()
+		{
+			return create_huffman_implementation(N);
+		}
+
+		Datum decode_single_datum(io::InputStream&, data::Node<Datum>&);
+		void decode_bits(io::InputStream&, data::Node<Datum>&, io::OutputStream&);
 	}
 }
 
