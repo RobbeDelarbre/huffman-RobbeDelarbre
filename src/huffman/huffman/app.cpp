@@ -36,6 +36,8 @@ int main(int argc, char* argv[])
 
     if (mode == "compress")
     {
+        std::cout << "compressing " + inputfile << std::endl;
+
         encoding::Encoding<256, 257> eof = encoding::eof_encoding<256>();
         encoding::Encoding<257, 2> huffman = encoding::huffman::huffman_encoding<257>();
         encoding::Encoding<2, 256> grouper = encoding::bit_grouper<8>();
@@ -43,9 +45,14 @@ int main(int argc, char* argv[])
         auto combiner = eof | huffman | grouper;
 
         encode(io::create_file_data_source(inputfile), combiner, io::create_file_data_destination(outputfile));
+
+
+        std::cout << "done" << std::endl;
     }
     else if (mode == "decompress")
     {
+        std::cout << "compressing " + inputfile << std::endl;
+
         encoding::Encoding<256, 257> eof = encoding::eof_encoding<256>();
         encoding::Encoding<257, 2> huffman = encoding::huffman::huffman_encoding<257>();
         encoding::Encoding<2, 256> grouper = encoding::bit_grouper<8>();
@@ -53,6 +60,8 @@ int main(int argc, char* argv[])
         auto combiner = eof | huffman | grouper;
 
         decode(io::create_file_data_source(inputfile), combiner, io::create_file_data_destination(outputfile));
+
+        std::cout << "done" << std::endl;
     }
     return 0; 
 #else
