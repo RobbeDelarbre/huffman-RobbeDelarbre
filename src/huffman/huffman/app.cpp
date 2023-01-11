@@ -51,7 +51,7 @@ int main(int argc, char* argv[])
     }
     else if (mode == "decompress")
     {
-        std::cout << "compressing " + inputfile << std::endl;
+        std::cout << "decompressing " + inputfile << std::endl;
 
         encoding::Encoding<256, 257> eof = encoding::eof_encoding<256>();
         encoding::Encoding<257, 2> huffman = encoding::huffman::huffman_encoding<257>();
